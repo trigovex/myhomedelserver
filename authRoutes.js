@@ -173,7 +173,7 @@ router.post('/AddUserAddresses',async (req,res)=>{
 
 router.post('/UserSignup',async (req,res)=>{
    
-  const {PhoneNumber,email,Name,Role,Address,Id,Password } = req.body;
+  const {PhoneNumber,Name,Role,Address,Id,Password } = req.body;
   const user = await User.findOne({PhoneNumber})
   
   if(user){
@@ -182,8 +182,8 @@ router.post('/UserSignup',async (req,res)=>{
   else{
 
        
-          const user = new User({PhoneNumber,email,Name,Role,Address,Id,Password });
-          user.save();
+          const user = new User({PhoneNumber,Name,Role,Address,Id,Password });
+          await user.save();
           res.send({"Status":"Yes"});
          console.log("done");
 
@@ -331,7 +331,7 @@ router.put('/LocationUpdate',async (req,res)=>{
     res.send(data);
   })
   .catch(err=>{
-    res.send("Error Occured.!");
+    res.send("error....!");
   })
 })
 
@@ -362,7 +362,7 @@ router.put('/UpdateItemStatus',async (req,res)=>{
     res.send(data);
   })
   .catch(err=>{
-    res.send("error...!");
+    res.send("error....!");
   })
 })
 
