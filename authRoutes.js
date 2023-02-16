@@ -331,7 +331,7 @@ router.put('/LocationUpdate',async (req,res)=>{
     res.send(data);
   })
   .catch(err=>{
-    res.send("error....!");
+    res.send("Error Occured.!");
   })
 })
 
@@ -362,7 +362,7 @@ router.put('/UpdateItemStatus',async (req,res)=>{
     res.send(data);
   })
   .catch(err=>{
-    res.send("error.....!");
+    res.send("error...!");
   })
 })
 
