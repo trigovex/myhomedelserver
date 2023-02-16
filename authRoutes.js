@@ -185,7 +185,7 @@ router.post('/UserSignup',async (req,res)=>{
           const user = new User({PhoneNumber,Name,Role,Address,Id,Password });
           await user.save();
           res.send({"Status":"Yes"});
-         console.log("done");
+         console.log("Done");
 
 
   }
