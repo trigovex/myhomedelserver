@@ -189,7 +189,7 @@ router.post('/UserSignup',async (req,res)=>{
          //console.log("Done");
           }
           catch(error){
-            console.log("Error")
+            console.log("Error",error)
           }
 
 
